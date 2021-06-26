@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this website helps to short the url">
+    <meta name="keywords" content="url-shortener,urlshortener,online free url shortener">
+    <title>urlshortner</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto",sans-serif;
+        }
+        header{
+            width: 100%;
+            height:80px;
+            color: aliceblue;
+            display: grid;
+            place-items: center;
+            background: hsl(207, 90%, 54%)
+            
+        }
+        .container{
+            margin-top: 50px;
+            display: grid;
+            place-items: center;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        form{
+            display: grid;
+            place-items: center;
+
+        }
+        input{
+   width:600px;
+    height: 39px;
+    border-radius: 23px;
+    border: none;
+    outline: none;
+    padding: 13px;
+    box-shadow: 0px 0px 20px -8px rgb(0 0 0 / 30%);
+        }
+        input:hover{
+            box-shadow: 0px 0px 19px -6px #0b90cc;
+        }
+        button{
+    height: 27px;
+    width: 68px;
+    border: none;
+    outline: none;
+    background: linear-gradient(
+190deg
+, #19b8ff, #14299e);
+    font-size: 18px;
+    transition: all ease-in-out;
+    color: white;
+        }
+        button:hover{
+            opacity: 0.9;
+            transform: scale(1.2);
+        }
+        table {
+  width: 100%;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: hsl(207, 90%, 54%);
+  border-style: solid;
+}
+
+ td, th {
+  border-width: 2px;
+  border-color: #2094F3;
+  border-style: solid;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 5px;
+ }
+ td{
+     color: black;
+     font-weight: bold;
+ }
+
+thead {
+  background-color: #2094F3;
+}
+@media screen and (max-width: 680px){
+table{
+    width: 70%;
+}
+input{
+    width: 466px;
+}
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Url-Shortener</h1>
+    </header>
+    <div class="container">
+    <form action="/" method="POST">
+        <input type="url" name="fullUrl" id="fullUrl"><br/>
+        <button type="submit">shortIt</button>
+    </form>
+<br/>
+<table class="Table">
+    <thead>
+      <tr>
+        <th>Fullurl</th>
+        <th>shorturl</th>
+        <th>clicks</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% shortUrls.forEach(shortUrl => { %>
+            <tr>
+                <td><a href="<%= shortUrl.fullurl %>" target="_blank"> <%= shortUrl.fullurl %> </a></td>
+            <td><a href="<%= shortUrl.shorturl %>" target="_blank"> <%= shortUrl.shorturl %></a></td>
+           <td> <%= shortUrl.clicks %></td>
+           </tr>
+         <% }) %>
+   
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
