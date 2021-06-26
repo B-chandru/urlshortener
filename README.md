@@ -6,9 +6,9 @@ This repository is about how to create a urlshortener.
 
   ## Tech Stack
 
-**Client:** Ejs.
-**Server:** Node, Express.
-**Database:** Mongodb.
+**Client:** Ejs
+**Server:** Node, Express
+**Database:** Mongodb
 
 ## Run Locally
 
