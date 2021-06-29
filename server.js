@@ -41,5 +41,5 @@ mongoose.connect(process.env.MONGODB, {useNewUrlParser: true, useUnifiedTopology
  const port = process.env.PORT || 5000
 
 app.listen(port,()=>{
-    console.log("server running on 3000...")
+    console.log("server running on 5000...")
 })
