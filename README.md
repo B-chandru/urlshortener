@@ -1,6 +1,6 @@
 # urlshortener
 
-This repository is about how to create a urlshortener.
+This repository is about how to create a urlshortener using expess,node,mongodb.
 
 
 
